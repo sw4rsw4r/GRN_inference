@@ -1,0 +1,46 @@
+TEST1
+ - Fixed a bug in node_labels 
+ - Filter genes
+ - Normalize
+ - Scaling
+ - Used TFs and required_genes only for both training and predicting
+ - pseudobulking 150 cells
+TEST2
+ - Fixed a bug in node_labels 
+ - Filter genes
+ - Normalize
+ - Scaling
+ - Used TFs and all genes for both training and predicting
+ - pseudobulking 150 cells
+TEST3
+ - Fixed a bug in node_labels 
+ - Filter genes
+ - Normalize
+ - Scaling
+ - Used TFs and all genes for both training and predicting
+ * Use the same blacklist as eBIC - selected_genes <- intersect of genes in expression and network
+ - pseudobulking 150 cells
+ - for robustness test using 3 random seed(111, 123, 1234)
+TEST4
+ - Used JASPAR instead of STRING for training and predicting
+ - Refactored scripts
+ - Used TMM method for normalization
+ - Made a change to the method for pseudobulking. Previously, the method randomly selected 150 cells out of a total of N cells, resulting in the exclusion of the remaining N-150 cells. Now we generate multiple replicates and use the median valude from the replicates.
+TEST5
+ - Used JASPAR for training and STRING for predicting
+TEST6
+ - Used STRING edges overlapped with JASPAR
+TEST7
+ - TEST3 with Refactored scripts
+TEST14
+ - /home/seongwonhwang/Desktop/projects/git/GRN_inference_practice/input_data_processing/data/bulk_anonymize
+TEST15
+ - dermal.fibroblast_iPSC
+ - Used all TFs and genes for predicting
+ - v2 - use all possible edges for prediction
+ - v3 - use GENIE3 network (cutoff - upper quantile 30)
+ - v4 - use GENIE3 network (cutoff - upper quantile 20) + STRING
+ - v5 - use STRING
+TEST16
+ - dermal.fibroblast_myoblast
+ - v4 - use GENIE3 network (cutoff - upper quantile 20) + STRING

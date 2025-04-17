@@ -1,0 +1,6 @@
+input_data_processing/data/
+*/data/
+*/__pycache__
+*/__init__.py
+BIC/edge_strength*.txt
+use_gpu/cuda_11.8.0_520.61.05_linux.run
